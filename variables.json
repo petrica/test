@@ -41,7 +41,7 @@
             "type": "array",
             "value": "[array(parameters('objectToConvert'))]"
         },
-        "availabilityZones" {
+        "availabilityZones": {
             "type": "array",
             "value": "[parameters('availabilityZones')]"
         }
