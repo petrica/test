@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "intToConvert": {
+            "type": "int",
+            "defaultValue": 1
+        },
+        "stringToConvert": {
+            "type": "string",
+            "defaultValue": "a"
+        },
+        "objectToConvert": {
+            "type": "object",
+            "defaultValue": {"a": "b", "c": "d"}
+        },
+        "availabilityZones": {
+            "metadata": {
+                "description": "Availability zones for scale sets"
+            },
+            "defaultValue": [
+                "1",
+                "2",
+                "3"
+            ],
+            "type": "array"
+        }
+    },
+    "resources": [
+    ],
+    "outputs": {
+        "intOutput": {
+            "type": "array",
+            "value": "[array(parameters('intToConvert'))]"
+        },
+        "stringOutput": {
+            "type": "array",
+            "value": "[array(parameters('stringToConvert'))]"
+        },
+        "objectOutput": {
+            "type": "array",
+            "value": "[array(parameters('objectToConvert'))]"
+        },
+        "availabilityZones" {
+            "type": "array",
+            "value": "[parameters('availabilityZones')]"
+        }
+    }
+}
